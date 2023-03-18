@@ -20,4 +20,8 @@ describe("fizzbuzz", () => {
   it("should return 'Buzz' for multiples of 5", () => {
     expect(fizzbuzz(5)).toBe("Buzz");
   });
+
+  it("should return 'FizzBuzz' for multiples of 15", () => {
+    expect(fizzbuzz(15)).toBe("FizzBuzz");
+  });
 });
