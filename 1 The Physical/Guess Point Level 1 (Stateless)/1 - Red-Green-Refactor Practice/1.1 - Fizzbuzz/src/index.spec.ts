@@ -13,4 +13,7 @@ describe("fizzbuzz", () => {
     expect(() => fizzbuzz(-1)).toThrow();
   });
 
+  it("should return 'Fizz' for multiples of 3", () => {
+    expect(fizzbuzz(3)).toBe("Fizz");
+  });
 });
