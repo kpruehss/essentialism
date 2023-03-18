@@ -24,4 +24,9 @@ describe("fizzbuzz", () => {
   it("should return 'FizzBuzz' for multiples of 15", () => {
     expect(fizzbuzz(15)).toBe("FizzBuzz");
   });
+
+  it("should be able to handle any number of inputs", () => {
+    const expected = "FizzBuzzBuzzFizzBuzz";
+    expect(fizzbuzz(3, 5, 10, 15)).toMatch(expected);
+  });
 });
