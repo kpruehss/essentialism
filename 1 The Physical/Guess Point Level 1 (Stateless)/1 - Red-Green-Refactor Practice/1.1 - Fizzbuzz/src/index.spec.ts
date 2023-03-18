@@ -29,4 +29,8 @@ describe("fizzbuzz", () => {
     const expected = "FizzBuzzBuzzFizzBuzz";
     expect(fizzbuzz(3, 5, 10, 15)).toMatch(expected);
   });
+
+  it("should return empty string when no input is present", () => {
+    expect(fizzbuzz()).toBe("");
+  });
 });
