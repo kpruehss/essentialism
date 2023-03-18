@@ -6,11 +6,11 @@ const isMultipleOf5 = isMultiple(5);
 const isMultipleOf15 = isMultiple(15);
 
 export function fizzbuzz(...n: Array<number>): string {
-  if (n < 1 || n > 100) throw new Error("Number outside allowable range (1-100)");
-
-  if (isMultipleOf15(n)) return "FizzBuzz";
-  if (isMultipleOf5(n)) return "Buzz";
-  if (isMultipleOf3(n)) return "Fizz";
-
-  return String(n);
+  return n.reduce<string>((result, n) => {
+    if (n < 1 || n > 100) throw new Error("Out of range value detected");
+    if (isMultipleOf15(n)) return result += "FizzBuzz";
+    if (isMultipleOf5(n)) return result += "Buzz";
+    if (isMultipleOf3(n)) return result += "Fizz";
+    return result += n;
+  }, "");
 }
